@@ -719,7 +719,7 @@ button {
 
   font-style: italic;
 
-  color: rgba(241,221,176,.78);
+  color: #f4dca4;
 
   margin-bottom: 25px;
 }
@@ -4139,5 +4139,43 @@ button {
     height: 44px;
 
     font-size: 18px;
+  }
+}
+/* =====================================================
+   OPENING IMAGE
+===================================================== */
+
+.opening-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center center;
+
+  display: block;
+
+  z-index: 0;
+
+  /* Do not alter the original image colors */
+  filter: none;
+  opacity: 1;
+}
+/* =====================================================
+   MOBILE OPENING IMAGE
+===================================================== */
+
+@media (max-width: 600px) {
+  .opening-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+
+    filter: none;
+    opacity: 1;
   }
 }
