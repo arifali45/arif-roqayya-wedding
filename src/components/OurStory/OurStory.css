@@ -1,0 +1,177 @@
+.story-section {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  min-height: 100svh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 76px 24px 64px;
+  color: #4b101c;
+  background:
+    radial-gradient(ellipse at 50% 58%, rgba(186, 150, 96, 0.12), transparent 55%),
+    #f4e8d2;
+}
+
+.story-header {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.story-kicker {
+  margin-bottom: 14px;
+  color: #a3212e;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.32em;
+}
+
+.story-header h2 {
+  margin: 0;
+  color: #4b101c;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-size: clamp(42px, 6vw, 70px);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.story-divider {
+  display: flex;
+  width: 132px;
+  align-items: center;
+  gap: 10px;
+  margin: 17px auto 0;
+  color: #c3984c;
+  font-size: 13px;
+}
+
+.story-divider::before,
+.story-divider::after {
+  height: 1px;
+  flex: 1;
+  background: rgba(195, 152, 76, 0.72);
+  content: '';
+}
+
+.story-carousel {
+  width: min(820px, 88vw);
+}
+
+.story-photo-frame {
+  position: relative;
+  aspect-ratio: 1.58;
+  padding: 10px;
+  border: 1px solid rgba(164, 127, 67, 0.75);
+  background: rgba(255, 251, 242, 0.7);
+  box-shadow: 0 20px 54px rgba(71, 29, 26, 0.14);
+}
+
+.story-photo-frame::before {
+  position: absolute;
+  z-index: 2;
+  inset: 7px;
+  border: 1px solid rgba(255, 246, 224, 0.6);
+  content: '';
+  pointer-events: none;
+}
+
+.story-photo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.story-arrow {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(255, 240, 208, 0.74);
+  border-radius: 50%;
+  background: rgba(45, 8, 15, 0.48);
+  color: #fff4df;
+  font-family: Georgia, serif;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  transform: translateY(-50%);
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.story-arrow:hover {
+  background: rgba(45, 8, 15, 0.78);
+  transform: translateY(-50%) scale(1.05);
+}
+
+.story-arrow-prev {
+  left: 22px;
+}
+
+.story-arrow-next {
+  right: 22px;
+}
+
+.story-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.story-dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 1px solid #a3212e;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: background-color 180ms ease, transform 180ms ease;
+}
+
+.story-dot.active {
+  background: #a3212e;
+  transform: scale(1.15);
+}
+
+@media (max-width: 640px) {
+  .story-section {
+    min-height: auto;
+    padding: 82px 18px 68px;
+  }
+
+  .story-header {
+    margin-bottom: 24px;
+  }
+
+  .story-carousel {
+    width: min(100%, 520px);
+  }
+
+  .story-photo-frame {
+    aspect-ratio: 0.9;
+    padding: 7px;
+  }
+
+  .story-arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .story-arrow-prev {
+    left: 14px;
+  }
+
+  .story-arrow-next {
+    right: 14px;
+  }
+}

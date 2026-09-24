@@ -1,0 +1,138 @@
+.opening {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  width: 100%;
+  place-items: center;
+  overflow: hidden;
+  color: var(--color-ivory);
+  background:
+    radial-gradient(ellipse at 50% 42%, rgba(132, 43, 51, 0.78), transparent 54%),
+    radial-gradient(ellipse at 50% 100%, rgba(111, 58, 31, 0.2), transparent 48%),
+    linear-gradient(145deg, #351017 0%, #21080e 48%, #120509 100%);
+}
+
+.opening::before,
+.opening::after {
+  position: absolute;
+  content: '';
+  pointer-events: none;
+}
+
+.opening::before {
+  inset: 22px;
+  border: 1px solid rgba(221, 184, 113, 0.48);
+  background:
+    linear-gradient(var(--color-gold), var(--color-gold)) top left / 42px 1px no-repeat,
+    linear-gradient(var(--color-gold), var(--color-gold)) top left / 1px 42px no-repeat,
+    linear-gradient(var(--color-gold), var(--color-gold)) top right / 42px 1px no-repeat,
+    linear-gradient(var(--color-gold), var(--color-gold)) top right / 1px 42px no-repeat,
+    linear-gradient(var(--color-gold), var(--color-gold)) bottom left / 42px 1px no-repeat,
+    linear-gradient(var(--color-gold), var(--color-gold)) bottom left / 1px 42px no-repeat,
+    linear-gradient(var(--color-gold), var(--color-gold)) bottom right / 42px 1px no-repeat,
+    linear-gradient(var(--color-gold), var(--color-gold)) bottom right / 1px 42px no-repeat;
+  opacity: 0.8;
+}
+
+.opening::after {
+  inset: 37px;
+  border: 1px solid rgba(221, 184, 113, 0.16);
+}
+
+.opening-content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 680px);
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.bismillah {
+  margin-bottom: 27px;
+  color: #e4c47a;
+  font-size: clamp(30px, 5vw, 42px);
+  line-height: 1.5;
+}
+
+.small-text {
+  margin-bottom: 24px;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  opacity: 0.86;
+}
+
+.ornament {
+  margin: 17px 0;
+  color: #d9b567;
+  font-size: 20px;
+}
+
+.opening h1 {
+  margin: 5px 0;
+  color: #f5dfad;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Georgia, serif;
+  font-size: clamp(42px, 7vw, 82px);
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  line-height: 1.08;
+}
+
+.weds {
+  margin: 17px 0;
+  color: #d7b76a;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.55em;
+  text-indent: 0.55em;
+}
+
+.date {
+  margin-top: 25px;
+  color: #e6d09a;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.36em;
+}
+
+.open-button {
+  min-height: 48px;
+  margin-top: 35px;
+  padding: 14px 28px;
+  border: 1px solid rgba(217, 181, 103, 0.82);
+  background: rgba(20, 5, 9, 0.2);
+  color: #f3dca4;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  cursor: pointer;
+  transition: background-color 240ms ease, color 240ms ease, border-color 240ms ease;
+}
+
+.open-button:hover {
+  border-color: #e4c47a;
+  background: #d9b567;
+  color: #3b0a12;
+}
+
+@media (max-width: 600px) {
+  .opening::before {
+    inset: 14px;
+  }
+
+  .opening::after {
+    inset: 27px;
+  }
+
+  .opening-content {
+    padding-inline: 38px;
+  }
+
+  .small-text {
+    font-size: 10px;
+  }
+
+  .date {
+    letter-spacing: 0.25em;
+  }
+}
