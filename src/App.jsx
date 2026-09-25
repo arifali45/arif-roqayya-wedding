@@ -608,18 +608,18 @@ function App() {
 
           {/* CLOSING */}
 
-          <div className="hero-closing">
+                <div className="hero-closing">
 
-            as they begin their beautiful new chapter
+                <h2>as they begin their beautiful new chapter and embark upon their forever together</h2>
 
-            <br />
+                <br />
 
-            and embark upon their forever together.
+                <h2>.</h2>
 
-          </div>
+                </div>
 
 
-          {/* DIVIDER */}
+                {/* DIVIDER */}
 
           <div className="hero-divider">
 

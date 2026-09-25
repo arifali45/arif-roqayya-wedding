@@ -1379,7 +1379,7 @@ button {
   }
 
   .hero-text {
-    top: auto;
+    top: 40%;
     bottom: 3%;
 
     right: 0;
