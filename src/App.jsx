@@ -539,11 +539,11 @@ function App() {
 
           <div className="hero-translation">
 
-            In the name of Allah, the Most Gracious,
+            <h3>In the name of Allah, the Most Gracious, the Most Merciful</h3>
 
             <br />
 
-            the Most Merciful
+            
 
           </div>
 
@@ -552,15 +552,15 @@ function App() {
 
           <div className="hero-blessing">
 
-            With the blessings of Allah (SWT),
+            <h3>With the blessings of Allah (SWT),</h3>
 
             <br />
 
-            we request the honour of your presence
+            <h3>we request the honour of your presence</h3>
 
             <br />
 
-            at the
+            <h3>at the</h3>
 
           </div>
 
